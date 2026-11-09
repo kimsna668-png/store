@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: navasealstore-clone-pro
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: navasealstore-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://navasealstore-clone-pro.onrender.com
+
+databases:
+  - name: navasealstore-db
+    plan: free
+    postgresMajorVersion: 16
