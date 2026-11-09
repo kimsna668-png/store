@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans selection:bg-brand-500 selection:text-white;
+  }
+}
+
+.khmer-font {
+  font-family: 'Kantumruy Pro', sans-serif;
+}
+
