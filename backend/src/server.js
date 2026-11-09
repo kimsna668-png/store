@@ -153,7 +153,7 @@ if (require.main === module) {
   const server = app.listen(PORT, () => {
     console.log(`===============================================`);
     console.log(`🚀 NavasealStore Clone Pro API running on port ${PORT}`);
-    console.log(`📡 Health Check: http://localhost:${PORT}/api/health`);
+    console.log(`📡 Health Check: https://store-cw7f.onrender.com/api/health`);
     console.log(`🌐 Frontend Origin: ${config.FRONTEND_URL}`);
     console.log(`===============================================`);
   });
